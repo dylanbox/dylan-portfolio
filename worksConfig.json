@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "blah",
+    "title": "Blah",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, explicabo.",
+    "featureImage": "http://www.placehold.it/300x400",
+    "isLargePreview": true
+  }
+]

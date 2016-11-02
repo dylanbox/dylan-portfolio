@@ -1,0 +1,30 @@
+{
+  "name": "dylan-portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio website, duh!",
+  "main": "server.js",
+  "scripts": {
+    "build-sass": "sass ./src/scss/main.scss:./dist/css/main.css",
+    "watch-sass": "sass --watch ./src/scss/main.scss:./dist/css/main.css",
+    "clean": "rm -rf dist/css && mkdir -p dist/css",
+    "build": "npm run clean && npm run build-sass",
+    "watch": "npm run clean && npm run watch-sass & nodemon server -e njk,js,json",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanbox/dylan-portfolio.git"
+  },
+  "author": "Dylan Box",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dylanbox/dylan-portfolio/issues"
+  },
+  "homepage": "https://github.com/dylanbox/dylan-portfolio#readme",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "config": "^1.21.0",
+    "express": "^4.14.0",
+    "nunjucks": "^2.5.2"
+  }
+}

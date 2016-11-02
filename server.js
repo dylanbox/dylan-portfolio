@@ -20,7 +20,11 @@ function BaseView(request, response) {
 
 function PortfolioView(work) {
   return function (request, response) {
-    response.render('work/' + work.slug + '.njk', {"work": work});
+    response.render('work.njk', {
+      "work": work,
+      isSmallSiteHeader: true,
+      "relatedWork": works[work.relatedWorkIndex | 0]
+    });
   }
 }
 

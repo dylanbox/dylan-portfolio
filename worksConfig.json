@@ -3,7 +3,39 @@
     "slug": "blah",
     "title": "Blah",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, explicabo.",
-    "featureImage": "http://www.placehold.it/300x400",
-    "isLargePreview": true
+    "featureImageSrc": "http://www.placehold.it/300x400",
+    "isLargePreview": true,
+    "relatedWorkIndex": 1,
+    "images": [
+      {
+        "src": "http://www.placehold.it/600x400"
+      },
+      {
+        "src": "http://www.placehold.it/300x400",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, ipsum."
+      },
+      {
+        "src": "http://www.placehold.it/300x600"
+      },
+      {
+        "src": "http://www.placehold.it/200x400"
+      }
+    ]
+  },
+  {
+    "slug": "blah-2",
+    "title": "Blah2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, explicabo.",
+    "featureImageSrc": "http://www.placehold.it/300x400",
+    "isLargePreview": false,
+    "relatedWorkIndex": 0,
+    "images": [
+      {
+        "src": "http://www.placehold.it/600x400"
+      },
+      {
+        "src": "http://www.placehold.it/200x400"
+      }
+    ]
   }
 ]

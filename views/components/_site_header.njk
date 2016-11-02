@@ -1,12 +1,22 @@
-<header class="site-header__component grid grid-fixed">
+<header class="site-header__component {{ '-small' if isSmallSiteHeader }}">
+    <div class="grid grid-fixed">
 
-    <div class="box-logo__component -pop-and-spin">
-        <div class="box-logo--side box-logo--side-top"></div>
-        <div class="box-logo--side box-logo--side-left"></div>
-        <div class="box-logo--side box-logo--side-right"></div>
+        <div class="site-header--box-logo-container">
+            <a href="/" class="box-logo__component -pop-and-spin">
+                <div class="box-logo--side box-logo--side-top"></div>
+                <div class="box-logo--side box-logo--side-left"></div>
+                <div class="box-logo--side box-logo--side-right"></div>
+            </a>
+        </div>
+
+        <div class="site-header--text-content">
+            {% if isSmallSiteHeader %}
+                <h4>Dylan Box:</h4>
+                <h6>Product Design & Development</h6>
+            {% else %}
+                <h1>Dylan Box:</h1>
+                <h2>Product Design & Development</h2>
+            {% endif %}
+        </div>
     </div>
-
-    <h1>Dylan Box:</h1>
-    <h2>Product Design & Development</h2>
-
 </header>

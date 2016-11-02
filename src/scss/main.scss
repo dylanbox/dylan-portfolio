@@ -12,16 +12,8 @@
 @import 'grid';
 @import 'type';
 @import 'box-logo';
-
-.site-header__component {
-  @include gutter-padding;
-  @include vertical-padding($grid-gutter-width * 8);
-  min-height: 40vh;
-
-  .box-logo__component {
-    margin: $grid-gutter-width / 2 auto;
-  }
-}
+@import 'site-header';
+@import 'site-footer';
 
 .about-section__component {
   @include vertical-padding($grid-gutter-width * 8);
@@ -95,19 +87,34 @@
   }
 }
 
-
-.site-footer__component {
-  @include gutter-padding;
-  @include vertical-padding($grid-gutter-width * 2);
-  background-color: $black;
-  color: $white;
-  text-align: center;
-
-  .site-footer--logo-container {
-    @include transform(scale(.5));
-    margin-bottom: -2rem
+.work-detail__page {
+  .work-detail--header {
+    @include vertical-padding($grid-gutter-width * 2);
+    background-color: $gray-lightest;
   }
-  .box-logo__component {
-    margin: 0 auto;
+
+  .work-detail--content {
+    @include vertical-padding($grid-gutter-width * 8);
+    text-align: center;
+
+    img {
+      @include image-fluid(inline-block)
+    }
+  }
+
+  .work-detail--related-work {
+    @include vertical-padding($grid-gutter-width * 8);
+    background-color: $gray-lightest;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: $font-color;
+    }
+
+    img {
+      @include image-fluid(inline-block)
+    }
   }
 }

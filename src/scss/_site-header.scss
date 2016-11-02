@@ -1,0 +1,41 @@
+.site-header__component {
+  @include gutter-padding;
+  @include vertical-padding($grid-gutter-width * 8);
+  min-height: 40vh;
+
+  &.-small {
+    @include vertical-padding($grid-gutter-width);
+    @include clearfix;
+    min-height: 0;
+
+    .grid {
+      padding-left: 5rem;
+      position: relative;
+
+      @include media-breakpoint-up('md') {
+        padding-left: 7rem;
+      }
+    }
+
+    .site-header--box-logo-container {
+      @include transform(scale(.4) translate(-50%, -85%));
+      left: 0;
+      position: absolute;
+      top: 0;
+
+      @include media-breakpoint-up('md') {
+        @include transform(scale(.5) translate(-30%, -50%));
+      }
+    }
+
+    .box-logo__component {
+      display: block;
+      height: 60px;
+    }
+  }
+
+  .box-logo__component {
+    display: block;
+    margin: $grid-gutter-width / 2 auto;
+  }
+}

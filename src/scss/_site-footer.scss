@@ -1,0 +1,17 @@
+.site-footer__component {
+  @include gutter-padding;
+  @include vertical-padding($grid-gutter-width * 2);
+  background-color: $black;
+  color: $white;
+  text-align: center;
+
+  .site-footer--logo-container {
+    @include transform(scale(.5));
+    margin-bottom: -2rem
+  }
+
+  .box-logo__component {
+    margin: 0 auto;
+    display: block;
+  }
+}

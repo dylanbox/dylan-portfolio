@@ -1,0 +1,42 @@
+{% extends 'site_base.njk' %}
+
+{% block main %}
+  <section class="work-detail__page">
+    <header class="work-detail--header">
+      <div class="grid grid-fixed">
+        <h1>{{ work.title }}</h1>
+        <p>{{ work.description }}</p>
+      </div>
+    </header>
+
+    <article class="work-detail--content">
+      <div class="grid grid-fixed">
+        {% for image in work.images %}
+          <figure class="work-detail--content">
+            <img src="{{ image.src }}" />
+            {% if image.description %}
+              <figcaption>
+                <p>{{ image.description }}</p>
+              </figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    </article>
+
+    <footer class="work-detail--related-work">
+      <div class="grid grid-fixed">
+        <h5>Related Work:</h5>
+        <a href="/work/{{ relatedWork.slug }}">
+          <figure>
+            <img src="{{ relatedWork.featureImageSrc }}" alt="{{ relatedWork.title }}">
+            <figcaption>
+              <h6>{{ relatedWork.title }}</h6>
+              <p>{{ relatedWork.description }}</p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </footer>
+  </section>
+{% endblock main %}

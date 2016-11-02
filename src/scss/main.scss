@@ -1,2 +1,113 @@
+@import 'variables';
 @import 'normalize';
- 
+
+// Mixins
+@import 'mixins/breakpoints';
+@import 'mixins/vendor-prefix';
+@import 'mixins/flex';
+@import 'mixins/grid';
+@import 'mixins/box-shape';
+@import 'mixins/images';
+
+@import 'grid';
+@import 'type';
+@import 'box-logo';
+
+.site-header__component {
+  @include gutter-padding;
+  @include vertical-padding($grid-gutter-width * 8);
+  min-height: 40vh;
+
+  .box-logo__component {
+    margin: $grid-gutter-width / 2 auto;
+  }
+}
+
+.about-section__component {
+  @include vertical-padding($grid-gutter-width * 8);
+  background-color: $black;
+  color: $white;
+
+  .about-section--skills-container {
+    text-align: center;
+  }
+
+  .about-section--skills {
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 $grid-gutter-width / 2;
+    }
+  }
+
+}
+
+.work-list__component {
+  @include vertical-padding($grid-gutter-width * 8);
+  overflow: hidden;
+
+  .work-list--list-container {
+    @include list-unstyled;
+    @include make-row;
+  }
+
+  .work-list--work-container {
+    @include make-column-ready;
+    @include make-column('sm', 6);
+    @include make-column('md', 4);
+    margin-bottom: $grid-gutter-width;
+
+    &.work-list--work-container-large {
+      @include make-column('sm', 12);
+      @include make-column('md', 8);
+    }
+  }
+}
+
+.work-preview__component {
+  @include gutter-padding($grid-gutter-width * 2);
+  @include vertical-padding($grid-gutter-width * 2);
+  background-color: $gray-lightest;
+  min-height: 100%;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: $font-color;
+
+  .work-preview--image-container {
+    position: relative;
+    margin-bottom: $grid-gutter-width;
+    text-align: center;
+
+    img {
+      @include image-fluid(inline-block);
+    }
+  }
+
+  .work-preview--box-shape {
+    @include box-shape($size: 200px, $background-color: transparent, $border-width: 20px, $border-color: $blue);
+    @include translate(-50%, -50%);
+    opacity: .4;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+}
+
+
+.site-footer__component {
+  @include gutter-padding;
+  @include vertical-padding($grid-gutter-width * 2);
+  background-color: $black;
+  color: $white;
+  text-align: center;
+
+  .site-footer--logo-container {
+    @include transform(scale(.5));
+    margin-bottom: -2rem
+  }
+  .box-logo__component {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,98 @@
+$box-size: 100px;
+$top-side-transform: null;
+$left-side-transform: rotateX(-90deg) translateY($box-size);
+$right-side-transform: rotateY(90deg) translateX($box-size / 2);
+
+$side-transforms: (
+  ('top', $top-side-transform),
+  ('left', $left-side-transform),
+  ('right', $right-side-transform),
+);
+
+.box-logo__component {
+  // Create the perspective
+  @include transform(rotateX(54deg) rotateZ(45deg));
+  @include transform-style(preserve-3d);
+
+  height: $box-size * 2;
+  position: relative;
+  width: $box-size * 2;
+
+  .box-logo--side {
+    display: block;
+    float: left;
+    height: $box-size;
+    position: absolute;
+    width: $box-size;
+  }
+
+  .box-logo--side-top {
+    @include transform($top-side-transform);
+    @include transform-style(preserve-3d);
+    background-color: $gray-lightest;
+  }
+
+  .box-logo--side-left {
+    @include transform($left-side-transform);
+    @include transform-origin(center center);
+    left: $box-size / -2;
+    background-color: $gray-light;
+
+    &:after {
+      background-color: $gray-lighter;
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 50%;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .box-logo--side-right {
+    @include transform($right-side-transform);
+    @include transform-origin(center center);
+    background-color: $gray-dark;
+    right: $box-size / 2;
+
+    &:after {
+      border: $box-size / 2 solid $gray;
+      border-left-color: transparent;
+      border-top-color: transparent;
+    }
+  }
+
+  .box-logo--side-left,
+  .box-logo--side-right {
+    &:after {
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &.-pop-and-spin {
+    @each $side, $transform in $side-transforms {
+      .box-logo--side-#{$side} {
+        @include animation(20s 15s infinite both pop-and-spin-#{$side});
+      }
+    }
+  }
+}
+
+@each $side, $transform in $side-transforms {
+  @include keyframes('pop-and-spin-#{$side}') {
+    0%,
+    15%,
+    100% {
+      @include transform($transform rotateZ(0deg));
+    }
+
+    5% {
+      @include transform($transform translateZ($box-size / 4) rotateZ(0deg));
+    }
+
+    10% {
+      @include transform($transform translateZ($box-size / 4) rotateZ(360deg));
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@mixin vendor-prefix($property, $value, $vendors: ('webkit', 'moz', 'o'), $no-prefix: true) {
+  @each $vendor in $vendors {
+    #{-#{$vendor}-#{$property}}: $value;
+  }
+  // Bare Property
+  @if $no-prefix == true {
+    #{$property}: $value;
+  }
+}
+
+@mixin transform($transform) {
+  @include vendor-prefix('transform', $transform);
+}
+
+@mixin transform-style($transform-style) {
+  @include vendor-prefix('transform-style', $transform-style);
+}
+
+@mixin transform-origin($transform-origin) {
+  @include vendor-prefix('transform-origin', $transform-origin);
+}
+
+@mixin translate($translate-x, $translate-y) {
+  @include transform(translate($translate-x, $translate-y));
+}
+
+@mixin perspective($perspective) {
+  @include vendor-prefix('perspective', $perspective);
+}
+
+@mixin perspective-origin($perspective-origin) {
+  @include vendor-prefix('perspective-origin', $perspective-origin);
+}
+
+@mixin animation($animation) {
+  @include vendor-prefix('animation', $animation);
+}
+
+@mixin keyframes($animation-name) {
+  @at-root {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }
+
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+}

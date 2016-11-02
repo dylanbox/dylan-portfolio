@@ -1,0 +1,56 @@
+@mixin box-shape($size: 100px, $background-color: $white, $border-width: null, $border-color: null) {
+  $triangle-scale-factor: .7071;
+  $height-scale-factor: .5774;
+
+  position: relative;
+  width: $size;
+  height: $size * $height-scale-factor;
+  background-color: $background-color;
+  border-style: solid;
+  border-width: 0;
+
+  @if $border-color {
+    border-color: $border-color;
+  }
+
+  @if $border-width {
+    border-left-width: $border-width;
+    border-right-width: $border-width;
+  }
+
+  &:before,
+  &:after {
+    background-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    content: '';
+    height: $size * $triangle-scale-factor;
+    position: absolute;
+    width: $size * $triangle-scale-factor;
+    z-index: 1;
+
+    @if $border-color {
+      border-color: $border-color;
+    }
+  }
+
+  &:before {
+    @include transform(scaleY($height-scale-factor) rotate(-45deg) translate(-50%, -50%));
+    left: 69%;
+    top: -60%;
+    @if $border-width {
+      border-right-width: $border-width * 2 * $triangle-scale-factor;
+      border-top-width: $border-width * 2 * $triangle-scale-factor;
+    }
+  }
+
+  &:after {
+    @include transform(scaleY($height-scale-factor) rotate(-45deg) translate(-50%, 50%));
+    bottom: -13%;
+    left: 6%;
+    @if $border-width {
+      border-bottom-width: $border-width * 2 * $triangle-scale-factor;
+      border-left-width: $border-width * 2 * $triangle-scale-factor;
+    }
+  }
+}

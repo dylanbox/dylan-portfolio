@@ -1,0 +1,83 @@
+body {
+  background-color: $background-color;
+}
+
+.grid {
+  @include gutter-padding;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.grid-fixed {
+    @each $size, $breakpoint in $grid-breakpoints {
+      @if $size != 'xs' {
+        @include media-breakpoint-up($size) {
+          max-width: $breakpoint;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  @include make-row;
+}
+
+.column {
+  @include make-column-ready;
+}
+
+@each $size, $breakpoint in $grid-breakpoints {
+  @include media-breakpoint-up($size) {
+    @for $column-number from 1 through $grid-columns {
+      .column.column-#{$column-number}-#{$size} {
+        @include make-column($size, $column-number);
+      }
+
+      .column.column-offset-#{$column-number}-#{$size} {
+        @include make-column-offset($size, $column-number);
+      }
+    }
+
+    .row {
+      &.row-row-reverse-#{$size} {
+        @include flex-direction(row-reverse);
+      }
+
+      &.row-column-reverse-#{$size} {
+        @include flex-direction(column-reverse);
+      }
+
+      &.row-start-#{$size} {
+        @include justify-content(start);
+      }
+
+      &.row-center-#{$size} {
+        @include justify-content(center);
+      }
+
+      &.row-end-#{$size} {
+        @include justify-content(end);
+      }
+
+      &.row-around-#{$size} {
+        @include justify-content(around);
+      }
+
+      &.row-between-#{$size} {
+        @include justify-content(between);
+      }
+
+      &.row-top-#{$size} {
+        @include align-items(start);
+      }
+
+      &.row-middle-#{$size} {
+        @include align-items(center);
+      }
+
+      &.row-bottom-#{$size} {
+        @include align-items(end);
+      }
+    }
+  }
+}

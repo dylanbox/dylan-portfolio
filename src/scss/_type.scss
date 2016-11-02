@@ -1,0 +1,84 @@
+html,
+body {
+  color: $font-color;
+  font-family: $body-font-family;
+  font-size: $font-size-base;
+  font-weight: $roboto-light-weight;
+  line-height: $line-height-base;
+}
+
+strong {
+  font-weight: $roboto-bold-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $biryani-black-weight;
+  line-height: $headings-line-height;
+}
+
+
+h1 {
+  font-size: $font-size-h1;
+
+  @include media-breakpoint-up('md') {
+    font-size: $font-size-h1 * 1.5;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2;
+
+  @include media-breakpoint-up('md') {
+    font-size: $font-size-h2 * 1.5;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3;
+
+  @include media-breakpoint-up('md') {
+    font-size: $font-size-h3 * 1.5;
+  }
+}
+
+h4 {
+  font-size: $font-size-h4;
+
+  @include media-breakpoint-up('md') {
+    font-size: $font-size-h4 * 1.5;
+  }
+}
+
+h5 {
+  font-size: $font-size-h5;
+
+  @include media-breakpoint-up('md') {
+    font-size: $font-size-h5 * 1.5;
+  }
+}
+
+h6 {
+  font-size: $font-size-h6;
+
+  @include media-breakpoint-up('md') {
+    font-size: $font-size-h6 * 1.5;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: $line-height-computed 0;
+}
+
+h4,
+h5,
+h6 {
+  margin: $line-height-computed / 2 0;
+}

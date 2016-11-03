@@ -1,40 +1,104 @@
 [
   {
-    "slug": "blah",
-    "title": "Blah",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, explicabo.",
-    "featureImageSrc": "http://www.placehold.it/300x400",
+    "slug": "waymark",
+    "title": "Waymark",
+    "previewDescription": "Frontend and Backend Development",
+    "description": "Marketing is hard, but <a href='https://www.waymark.com'>Waymark</a> makes it easy for small businesses to advertise online and list themselves where thir customers are looking. Waymark brings marketing and design automation to everyone, just input your phone number and we collect content about your business to automatically create ads and get your listings online.<br/><br/>Frontend Web Development, Backend Web Development.<br/><br/><em>2014-Present</em>",
+    "featureImageSrc": "/dist/images/waymark/waymark_dashboard_macbook.png",
     "isLargePreview": true,
-    "relatedWorkIndex": 1,
+    "relatedWorkIndex": 2,
     "images": [
       {
-        "src": "http://www.placehold.it/600x400"
-      },
-      {
-        "src": "http://www.placehold.it/300x400",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, ipsum."
-      },
-      {
-        "src": "http://www.placehold.it/300x600"
-      },
-      {
-        "src": "http://www.placehold.it/200x400"
+        "src": "/dist/images/waymark/waymark_dashboard_macbook.png"
       }
     ]
   },
   {
-    "slug": "blah-2",
-    "title": "Blah2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, explicabo.",
-    "featureImageSrc": "http://www.placehold.it/300x400",
+    "slug": "stik",
+    "title": "Stik.com",
+    "previewDescription": "Design and Frontend Development",
+    "description": "Real Estate Agent, Mortgage Brokers, and any pofessional can get listed, collect reviews and grow their business on <a href='https://www.stik.com'>Stik.com</a>. Now rebranded as <a href='/work/socialproof'>SocialProof.</a><br/><br/>Web Design, Branding, Graphic Design, Frontend Web Development.<br/><br/><em>2013-2014</em>",
+    "featureImageSrc": "/dist/images/stik/stik_profile_iphone.png",
+    "isLargePreview": false,
+    "relatedWorkIndex": 2,
+    "images": [
+      {
+        "src": "/dist/images/stik/stik_homepage_macbook.png"
+      },
+      {
+        "src": "/dist/images/stik/stik_profile_iphone.png"
+      },
+      {
+        "src": "/dist/images/stik/stik_profile_macbook.png"
+      },
+      {
+        "src": "/dist/images/stik/stik_listings_macbook.png"
+      }
+    ]
+  },
+  {
+    "slug": "socialproof",
+    "title": "SocialProof",
+    "previewDescription": "Design, Frontend, and Backend Development",
+    "description": "Busineses can help their sales teams and franchises sell better by collecting reviews and referrals, grow their word of mouth, and track customer satisfaction on <a href='https://www.social.pr'>SocialProof.</a><br/><br/>Web Design, Branding, Graphic Design, Frontend Web Development, Backend Web Development.<br/><br/><em>2014-Present</em>",
+    "featureImageSrc": "/dist/images/socialproof/socialproof_company_profile_macbook.png",
     "isLargePreview": false,
     "relatedWorkIndex": 0,
     "images": [
       {
-        "src": "http://www.placehold.it/600x400"
+        "src": "/dist/images/socialproof/socialproof_human_profile_iphone.png"
       },
       {
-        "src": "http://www.placehold.it/200x400"
+        "src": "/dist/images/socialproof/socialproof_human_profile_macbook.png"
+      },
+      {
+        "src": "/dist/images/socialproof/socialproof_company_profile_macbook.png"
+      }
+    ]
+  },
+  {
+    "slug": "mtelliottmakerspace",
+    "title": "Mt.Elliott Makerspace",
+    "previewDescription": "Graphic Design, Branding",
+    "description": "The Mt. Elliott Makerspace is a community workshop that serves as an environment for knowledge exchange and entrepreneurial experimentation through “making.” The intention of the Mt Elliott Makerspace is to pool the talents and tools of creative Makers by serving as a gathering space for learning, sharing and doing. By concentrating this Maker spirit, the Makerspace may begin to effectively address community challenges related to education, economic development, and well-being.<br/><br/>Graphic Design<br/><br/><em>2012</em>",
+    "featureImageSrc": "/dist/images/mtelliottmakerspace/safety_poster.png",
+    "isLargePreview": false,
+    "relatedWorkIndex": 0,
+    "images": [
+      {
+        "src": "/dist/images/mtelliottmakerspace/makerspace_logo.png"
+      },
+      {
+        "src": "/dist/images/mtelliottmakerspace/concentration_icons.png"
+      },
+      {
+        "src": "/dist/images/mtelliottmakerspace/safety_posters.png"
+      },
+      {
+        "src": "/dist/images/mtelliottmakerspace/safety_posters_2.png"
+      }
+    ]
+  },
+  {
+    "slug": "thelodge",
+    "title": "The Lodge",
+    "previewDescription": "Direction",
+    "description": "The Lodge is a flexible, affordable studio for the discerning artist and designer. We provide rentable working space for the creatives of Detroit. Check us out at <a href='//jointhelodge.com'>The Lodge</a><br/><br/><em>2016-Present</em>",
+    "featureImageSrc": "/dist/images/thelodge/loading_face.gif",
+    "isLargePreview": false,
+    "relatedWorkIndex": 0,
+    "images": [
+      {
+        "src": "/dist/images/thelodge/thelodge_logo.png"
+      },
+      {
+        "src": "/dist/images/thelodge/thelodge_macbook.png"
+      },
+      {
+        "src": "/dist/images/thelodge/thelodge_neon.png"
+      },
+      {
+        "src": "/dist/images/thelodge/thelodge_night.png"
       }
     ]
   }

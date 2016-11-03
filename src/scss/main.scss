@@ -61,11 +61,12 @@
   @include gutter-padding($grid-gutter-width * 2);
   @include vertical-padding($grid-gutter-width * 2);
   background-color: $gray-lightest;
+  color: $font-color;
+  display: block;
   min-height: 100%;
   position: relative;
-  display: block;
+  text-align: center;
   text-decoration: none;
-  color: $font-color;
 
   .work-preview--image-container {
     position: relative;
@@ -114,7 +115,8 @@
     }
 
     img {
-      @include image-fluid(inline-block)
+      @include image-fluid(inline-block);
+      max-width: 200px;
     }
   }
 }

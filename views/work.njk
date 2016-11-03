@@ -5,7 +5,7 @@
     <header class="work-detail--header">
       <div class="grid grid-fixed">
         <h1>{{ work.title }}</h1>
-        <p>{{ work.description }}</p>
+        <p>{{ work.description|safe }}</p>
       </div>
     </header>
 
@@ -32,7 +32,7 @@
             <img src="{{ relatedWork.featureImageSrc }}" alt="{{ relatedWork.title }}">
             <figcaption>
               <h6>{{ relatedWork.title }}</h6>
-              <p>{{ relatedWork.description }}</p>
+              <p>{{ relatedWork.previewDescription }}</p>
             </figcaption>
           </figure>
         </a>

@@ -4,8 +4,8 @@
   "description": "My portfolio website, duh!",
   "main": "server.js",
   "scripts": {
-    "build-sass": "sass ./src/scss/main.scss:./dist/css/main.css",
-    "watch-sass": "sass --watch ./src/scss/main.scss:./dist/css/main.css",
+    "build-sass": "node-sass --include-path scss ./src/scss/main.scss ./dist/css/main.css",
+    "watch-sass": "node-sass --include-path scss --watch ./src/scss/main.scss ./dist/css/main.css",
     "build-images": "cpx './src/images/**/*.*' './dist/images'",
     "watch-images": "cpx './src/images/**/*.*' './dist/images' --watch",
     "clean": "rm -rf dist/css && mkdir -p dist/css",
@@ -27,11 +27,11 @@
     "compression": "^1.6.2",
     "config": "^1.21.0",
     "express": "^4.14.0",
-    "nunjucks": "^2.5.2",
-    "sass": "^0.5.0"
+    "nunjucks": "^2.5.2"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",
-    "cpx": "^1.5.0"
+    "cpx": "^1.5.0",
+    "node-sass": "^3.11.1"
   }
 }

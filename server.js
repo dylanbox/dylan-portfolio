@@ -30,6 +30,9 @@ function PortfolioView(work) {
   }
 }
 
+function Favicon(request, response) {
+  response.sendFile(__dirname + '/dist/images/favicon.ico');
+}
 
 // Urls
 // ========
@@ -44,6 +47,7 @@ for (var index = 0; index < works.length; index++) {
 
 // Static files
 app.use('/dist', express.static(__dirname + '/dist'));
+app.get('/favicon.ico', Favicon);
 
 // Since this is the last non-error-handling
 // middleware use()d, we assume 404, as nothing else

@@ -7,9 +7,13 @@ body {
   line-height: $line-height-base;
 }
 
+a {
+  color: $font-color;
+}
+
 p {
-  margin-top: 0;
   margin-bottom: $line-height-computed / 2;
+  margin-top: 0;
 }
 
 strong {

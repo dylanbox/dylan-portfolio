@@ -18,9 +18,15 @@
 .about-section__component {
   @include vertical-padding($grid-gutter-width * 8);
   background-color: $black;
-  color: $white;
 
+  &,
+  a {
+    color: $white;
+  }
+
+  .about-section--links,
   .about-section--skills-container {
+    margin-top: $grid-gutter-width * 3;
     text-align: center;
   }
 
@@ -33,6 +39,9 @@
     }
   }
 
+  .about-section--links {
+    font-size: $font-size-h1;
+  }
 }
 
 .work-list__component {
